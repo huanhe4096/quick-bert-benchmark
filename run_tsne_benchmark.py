@@ -13,6 +13,7 @@ def create_sample(n_samples=10000, dim=384):
     print('* creating sample ...')
     start_time = time.time()
     X = np.random.rand(n_samples, dim)
+    X = X.astype(np.float32)
     total_time = time.time() - start_time
     print('* created sample', X.shape)
     print(f'* Time(seconds): {total_time:.4f}')
